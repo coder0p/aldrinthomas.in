@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login-form</title>
+         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alata&family=Kanit:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/295/295128.png">
+        <style>
+            body {
+margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Alata', sans-serif;
+    background: rgb(233, 230, 230);
+}
+*{
+    margin:0;
+}
+:root{
+    --mainFont:'Alata', sans-serif;
+    --mainColor:#2a327d;
+}
+.container{
+position:relative;
+    width:300px;
+    height:400px;
+    background:#fff;
+    box-shadow:0 10px 15px rgba(0,0,0,.1),0 -5px 15px rgba(0,0,0,.1);
+    border-radius:10px;
+    display:grid;
+    grid-template-columns:280px;
+    grid-template-rows: 260px 140px;
+    justify-content:center;
+    overflow:hidden;
+}
+.container::before , .container::after{
+    content: "";
+    position: absolute;
+    width: 181px;
+    height: 430px;
+    background: #0042fd;
+    border-radius: 66%;
+    opacity: 0.2;
+}
+.container::before{
+    top:-30px;
+left:-10px;
+}
+.container::after{
+    top:-60px;
+    left:-60px;
+    opacity:.4;
+}
+.content{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:1;
+}
+.content h3{
+    text-align:center;
+    font-size:1.5rem;
+    color:var(--mainColor);
+    margin:5px 0 15px 0;
+}
+.inputs-div{
+    text-align:center;
+}
+.inputs-div input{
+    width:240px;
+    height:35px;
+    margin:5px;
+    padding:5px 10px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    border:1px solid #e0e0e0;
+    font-family:var(--mainFont);
+}
+input::placeholder{
+    color:#e0e0e0;
+}
+.inputs-div input:focus{
+    border-color:var(--mainColor);
+}
+.btn{
+    margin:5px;
+}
+.btn input{
+    width:263px;
+    height:45px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    background:var(--mainColor);
+    color:#fff;
+    font-family:var(--mainFont);
+    font-size:1.1rem;
+    cursor: pointer;
+}
+.btn:hover{
+    --mainColor:#0c1670;
+}
+.other-links{
+    text-align:center;
+    color:var(--mainColor);
+    z-index:1;
+}
+.other-links p:nth-child(2){
+    color:#000000;
+    font-size:.8rem;
+}
+.links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:10px;
+}
+.links a{
+    display:block;
+    width:130px;
+    height:45px;
+    background:blue;
+    text-decoration:none;
+    line-height:45px;
+    margin-left:1px;
+    border-radius:3px;
+    color:#fff;
+    font-size:1.3rem;
+    overflow:hidden;
+}
+a span{
+    display:block;
+    width:130px;
+    height:45px;
+    transition:.4s cubic-bezier(.75,-1,0,1.15);
+    font-size:1.1rem;
+}
+.fa{
+    transition:.4s cubic-bezier(.75,-1,0,1.15);
+}
+a:hover .fa{
+    transform:translateY(-45px);
+}
+a:hover span{
+    transform:translateY(-45px);
+}
+a:nth-child(1){
+    background:#db4a39;
+    margin-left:0px;
+}
+a:nth-child(2){
+    background:#3b5998;
+}
+a:nth-child(1):hover{
+background: #ff3620;
+}
+a:nth-child(2):hover{
+background: #143170;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+            <h3>Login</h3>
+            <div class="inputs-div">
+                <input type="text" class="input" placeholder="Username or email"/>
+                <input type="password" class="input" placeholder="Password"/>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Login"/>
+            </div>
+
+            </div>
+            <div class="other-links">
+                <p>or</p>
+                <p>login with your social media</p>
+                <div class="links">
+                <a href="#"><i class="fa fa-google" aria-hidden="true"></i><span>Google</span></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>facebook</span></a></div>
+            </div>
+        </div>
+    </body>
+</html>

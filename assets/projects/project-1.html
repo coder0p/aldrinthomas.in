@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1150/1150626.png">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #ececec;
+        }
+        .center{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+        }
+        nav ol{
+            display: flex;
+            list-style:none;
+            flex-wrap: wrap;
+        }
+        nav ol li a{
+            margin: 15px;
+        }
+        nav ol li a{
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: #000;
+            box-shadow: -10px -10px 15px rgba(255,255,255,.55), 10px 10px 15px rgba(70,70,70,.12);
+
+        }
+        nav input{
+            margin-left: 150px;
+            width: 320px;
+            height: 45px;
+            border-radius: 50px;
+            padding: 10px 0 10px 15px;
+            border:none;
+            outline: none;
+            background: #ececec;
+        }
+        input::placeholder{
+            color: #000;
+        }
+        i{
+            margin-left: 12px;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        nav input , i{
+            box-shadow: -10px -10px 15px rgba(255,255,255,.55),10px 10px 15px rgba(70,70,70,.12);
+        }
+        nav ol li a:hover,input:hover,i:hover{
+            box-shadow: inset -10px -10px 15px rgba(70,70,70,.12);
+        }
+        @media(max-width:1140px){
+            .main nav{
+                flex-direction: column;
+            }
+            
+            .search-box{
+                margin-top: 20px;
+            }
+            nav input{
+                margin-left:0;
+
+            }
+
+        }
+        @media(max-width:425px){
+            nav input{
+                width: 170px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main center">
+        <nav class="center">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ol>
+            <div class="search-box">
+                <input type="search" name="" id="" placeholder="Search.....">
+                <i class="fa fa-search"></i>
+            </div>
+        </nav>
+    </div>
+    
+</body>
+</html>
