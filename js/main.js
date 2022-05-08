@@ -310,6 +310,9 @@
 
 })(jQuery);
 
+
+//quotes api
+
 fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
 	"method": "GET",
 	"headers": {
@@ -326,3 +329,7 @@ fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
 .catch(err => {
 	console.error(err);
 });
+
+
+//age update
+document.getElementById("year").innerHTML= new Date().getFullYear()-1999;
